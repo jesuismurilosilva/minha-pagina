@@ -1,0 +1,284 @@
+    /* Base e Reset */
+    
+*
+{
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{  
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcfcfc; 
+    color: #220e01;            
+    line-height: 1.6;
+}
+
+    /* Títulos */
+
+h1, h2, h3 
+{   
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #140101;
+}
+
+img 
+{   
+    display: block;
+    max-width: 100%; 
+    height: auto;
+    border-radius: 4px;
+}
+
+    /* Topo*/
+
+.superinfo-bg 
+{
+    background-color: #130101; 
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.superinfo 
+{   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+    /* Menu */
+
+.menu-bg 
+{    
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky; /* Mantém o menu fixo no topo */
+    top: 0;
+    z-index: 100;
+}
+
+.menu 
+{   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-logo a 
+{    
+    font-size: 2.35rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.menu-nav ul 
+{
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+}
+
+.menu-nav ul li a 
+{   
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+}
+
+.menu-nav ul li a:hover 
+{   
+    color: #7a7a7a;
+}
+
+    /* Layout */
+
+main 
+{
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.introducao 
+{   
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+section 
+{   
+    padding: 60px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+section h2 
+{   
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+section h2::after 
+{   
+    content: '';
+    display: block;
+    width: 40px;
+    height: 10px; 
+    border-bottom: 2px solid #111111;
+}
+
+    /* Bloco Sobre */
+
+.sobre 
+{    
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.sobre-info 
+{    
+    flex: 1;
+}
+
+.sobre-info p 
+{    
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.sobre-img 
+{    
+    flex: 1;
+}
+
+.sobre-img img 
+{    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+}
+
+    /* Seção Formação */
+
+.formacao-bloco 
+{   
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.formacao-item 
+{   
+    background: #ffffff;
+    padding: 40px;
+    border: 1px solid #eaeaea7a;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.produtos-item h3 
+{    
+    font-size: 2.3rem;
+}
+
+.produtos-item.orange 
+{    
+    border-top: 4px solid #dd6a05; 
+}
+
+    /* Seção Certificados */
+
+.certificados 
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 3 colunas no desktop */
+    gap: 30px;
+}
+
+.certificados h2 
+{    
+    grid-column: 1 / -1; /* Faz o título ocupar a largura total do grid */
+}
+
+.certificados-item 
+{   
+    background-color: #ffffff;
+    border: 1px solid #eaeaea7a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificados-item:hover 
+{    
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.certificados-item h3 
+{    
+    font-size: 0.90rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #464242;
+}
+
+    /* Rodapé  */
+
+.footer 
+{   
+    background-color: #0f0f0f;
+    color: #6d6a6abd;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+    /* Responsivo e Telas Menores */
+
+@media (max-width: 900px) 
+{
+    .menu 
+    {   
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .sobre
+    {    
+        flex-direction: column; 
+        gap: 30px;
+    }
+    
+    .certificados
+    {
+        grid-template-columns: 1fr; /* Vira 1 coluna em telas menores */
+    }
+}
